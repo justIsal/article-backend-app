@@ -21,6 +21,12 @@ const UserSchema = new mongoose.Schema({
     minlength: 6,
     select: false,
   },
+  savedArticles: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Article', 
+    }
+  ]
 });
 
 UserSchema.pre("save", async function (next) {

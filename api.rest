@@ -1,0 +1,70 @@
+POST http://localhost:5000/api/v1/user/signin
+Content-Type: application/json
+
+{
+    "email" : "jhosf@example.com",
+    "password" : "12345678"
+}
+
+####
+POST http://localhost:5000/api/v1/user/signup
+Content-Type: application/json
+
+{
+    "name" : "jhon doedd",
+    "email" : "jhosf@example.com",
+    "password" : "12345678"
+}
+
+##############################3
+
+GET http://localhost:5000/api/v1/article
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2N2U1YTg3MTkwNWU2N2ZlZDM2ZDc5NCIsImlhdCI6MTcxOTU1Njk4Mn0.Mwy1cbruNBfCzXm9Oz0KPYPD-B6m7UjttZ-IAm6PwJA
+
+################################
+POST http://localhost:5000/api/v1/article
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2N2U1YTg3MTkwNWU2N2ZlZDM2ZDc5NCIsImlhdCI6MTcyMDM0Njk5MH0.Maxb4CKyj-7nR_H9Cy433msGL-Dn9aleLUv_3oPQGOY
+Content-Type: application/json
+
+{
+   "title": "Understanding JavaScript Closures",
+   "imgUrl": "https://multishoring.com/wp-content/uploads/2024/04/JavaScript-Symbol.png",
+   "author": "Jane Doe",
+   "status": "publish",
+   "content": "Closures are a powerful feature of JavaScript. They allow a function to access variables from an enclosing scope, even after the outer function has finished executing.",
+   "tag": [
+     "javascript",
+     "programming",
+     "web development"
+   ],
+   "date": "2024-06-02",
+   "comments": [
+     "665ca3e2de3ae42f7905d9af",
+     "665ca3e7de3ae42f7905d9b3"
+   ],
+   "category": "science"
+}
+
+################################################################
+DELETE http://localhost:5000/api/v1/article/665ca3cfde3ae42f7905d9ac
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2N2U1YTg3MTkwNWU2N2ZlZDM2ZDc5NCIsImlhdCI6MTcxOTU1Njk4Mn0.Mwy1cbruNBfCzXm9Oz0KPYPD-B6m7UjttZ-IAm6PwJA
+Content-Type: application/json
+################################################################
+POST http://localhost:5000/api/v1/article/665ca3cfde3ae42f7905d9ac/comments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2N2U1YTg3MTkwNWU2N2ZlZDM2ZDc5NCIsImlhdCI6MTcxOTU1Njk4Mn0.Mwy1cbruNBfCzXm9Oz0KPYPD-B6m7UjttZ-IAm6PwJA
+Content-Type: application/json
+
+{
+    "valueComment": "bututttttt",
+    "userId" : "667e5a871905e67fed36d794"
+}
+##############################3
+
+PUT  http://localhost:5000/api/v1/user/668a705fd1412646aed0903b/update
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2N2U1YTg3MTkwNWU2N2ZlZDM2ZDc5NCIsImlhdCI6MTcyMDM0Njk5MH0.Maxb4CKyj-7nR_H9Cy433msGL-Dn9aleLUv_3oPQGOY
+Content-Type: application/json
+
+{
+  "name": "tsalman",
+  "email": "tsalman@example.com"
+}
